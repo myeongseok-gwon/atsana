@@ -76,10 +76,22 @@ const App = () => {
     <div style={containerStyle}>
       <div style={innerContainerStyle}>
         <div style={columnStyle}>
-          <BorderBox>
-            <div style={titleStyle}>Focus</div>
-          </BorderBox>
-        </div>
+              <BorderBox>
+                <div style={titleStyle}>Focus</div>
+                <Image src={starImageUrl} alt="Stars" style={{ width: '100%', height: 'auto' }} />
+              </BorderBox>
+              <BorderBox>
+                <div style={titleStyle}>Top Visited</div>
+
+              </BorderBox>
+              <BorderBox>
+                <div style={titleStyle}>Video</div>
+                <video width="100%" controls>
+                  <source src="videos/temu_ad.mov" type="video/quicktime" />
+                  Your browser does not support the video tag.
+                </video>
+              </BorderBox>
+          </div>
         <div style={columnStyle}>
           <BorderBox>
             <div style={titleStyle}>Today's Picks</div>
