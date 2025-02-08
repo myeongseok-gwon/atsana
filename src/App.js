@@ -126,7 +126,7 @@ const App = () => {
                 <div style={titleStyle}>Focus</div>
                 <div style={grayboxContainerStyle}>
                   <Graybox1 title="Peak Duration" subtitle="0'32''"></Graybox1>
-                  <Graybox2 title="Level" imageSrc={starImageBase64} altText="level"></Graybox2>
+                  <Graybox2 title="Level" imageSrc={starImageBase64} altText="level" overlayText="5"></Graybox2>
                 </div>
               </BorderBox>
               <BorderBox>
