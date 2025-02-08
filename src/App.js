@@ -2,6 +2,8 @@
 import React from 'react';
 import { Grid, Row, Column } from '@carbon/react';
 import HistoryList from './components/HistoryList';
+import KeywordCard from './components/KeywordCard';
+
 
 /* ────────── 시계(Clock) 컴포넌트 ────────── */
 const Clock = () => {
@@ -27,7 +29,12 @@ const App = () => {
         <Row>
           {/* 왼쪽 사이드바 */}
           <Column sm={2} md={4} lg={4} className="sidebar left-sidebar">
-            <p>왼쪽 사이드바</p>
+            <KeywordCard
+              iconText="L"
+              title="AI in Drug Discovery"
+              label="02:12:32"
+              description="Transform your browser into a beautifully designed tab that helps you feel calm, keep focus, and stay energized. "
+            />
           </Column>
 
           {/* 중앙 메인 콘텐츠 (시계 포함) */}

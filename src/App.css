@@ -70,3 +70,12 @@
 .history-list a:hover {
   text-decoration: underline;
 }
+
+.app-container {
+  padding: 20px;
+  font-family: Arial, sans-serif;
+}
+
+.component-group {
+  margin-bottom: 20px;
+}
