@@ -3,13 +3,17 @@ import React from 'react';
 
 /**
  * TimeBlock 컴포넌트
- * 작은 블록 영역 안에 시간을 표시하거나 다른 내용을 담을 수 있습니다.
+ * bgColor
+ *  var(--Tag-Cyan-hover, #99DAFF)
+ *  var(--Tag-Gray-background, #E0E0E0)
+ *  var(--Tag-Magenta-background, #FFD6E8)
+ *  var(--Tag-Green-hover, #74E792)
  */
-const TimeBlock = ({ children }) => {
+const TimeBlock = ({ bgColor }) => {
   const containerStyle = {
     display: 'flex',
-    width: '40px',
-    height: '24px',
+    width: '20px',
+    height: '8px',
     padding: '13px 17px',
     flexDirection: 'column',
     justifyContent: 'center',
@@ -17,10 +21,15 @@ const TimeBlock = ({ children }) => {
     gap: '10px',
     flexShrink: 0,
     border: '1px solid var(--Background-ui-background, #FFF)',
-    background: 'var(--Tag-Green-hover, #74E792)',
+    background: bgColor || 'var(--Tag-Gray-background, #E0E0E0)'
+
+    // var(--Tag-Cyan-hover, #99DAFF)
+    // var(--Tag-Gray-background, #E0E0E0)
+    // var(--Tag-Magenta-background, #FFD6E8)
+    // var(--Tag-Green-hover, #74E792)
   };
 
-  return <div style={containerStyle}>{children}</div>;
+  return <div style={containerStyle}></div>;
 };
 
 export default TimeBlock;

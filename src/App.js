@@ -3,6 +3,8 @@ import React from 'react';
 import './App.css';
 import BorderBox from './components/BorderBox';
 import KeywordCard from './components/KeywordCard';
+import TimeBlock from './components/TimeBlock';
+import TimeTable from './components/TimeTable';
 
 const App = () => {
   const containerStyle = {
@@ -44,6 +46,29 @@ const App = () => {
     letterSpacing: '0px',
     color: '#000'
   };
+
+  const sampleData = [
+    ['#E0E0E0', '#E0E0E0', '#E0E0E0', '#74E792', '#74E792', '#74E792'], // Green
+    ['#74E792', '#74E792', '#74E792', '#74E792', '#74E792', '#74E792'],
+    ['#74E792', '#74E792', '#74E792', '#74E792', '#74E792', '#74E792'],
+    ['#E0E0E0', '#E0E0E0', '#E0E0E0', '#E0E0E0', '#E0E0E0', '#E0E0E0'],
+    ['#E0E0E0', '#E0E0E0', '#E0E0E0', '#99DAFF', '#99DAFF', '#99DAFF'], // Cyan, Gray, Magenta
+    ['#99DAFF', '#FFD6E8', '#FFD6E8', '#FFD6E8', '#FFD6E8', '#FFD6E8'], // Magenta
+    ['#FFD6E8', '#FFD6E8', '#FFD6E8', '#FFD6E8', '#FFD6E8', '#FFD6E8'], // Cyan
+    ['#FFD6E8', '#FFD6E8', '#FFD6E8', '#FFD6E8', '#FFD6E8', '#FFD6E8'],
+    ['#FFD6E8', '#E0E0E0', '#E0E0E0', '#E0E0E0', '#E0E0E0', '#E0E0E0'],
+    ['#E0E0E0', '#E0E0E0', '#E0E0E0', '#E0E0E0', '#E0E0E0', '#E0E0E0'],
+    ['#E0E0E0', '#E0E0E0', '#E0E0E0', '#E0E0E0', '#E0E0E0', '#E0E0E0'],
+    ['#E0E0E0', '#E0E0E0', '#99DAFF', '#99DAFF', '#99DAFF', '#99DAFF'],
+    ['#74E792', '#99DAFF', '#E0E0E0', '#E0E0E0', '#E0E0E0', '#E0E0E0'],
+    ['#E0E0E0', '#E0E0E0', '#E0E0E0', '#E0E0E0', '#E0E0E0', '#E0E0E0'],
+    ['#E0E0E0', '#99DAFF', '#99DAFF', '#FFD6E8', '#FFD6E8', '#FFD6E8'],
+    ['#99DAFF', '#FFD6E8', '#FFD6E8', '#FFD6E8', '#99DAFF', '#FFD6E8'],
+    ['#E0E0E0', '#E0E0E0', '#E0E0E0', '#E0E0E0', '#E0E0E0', '#E0E0E0'],
+    ['#E0E0E0', '#E0E0E0', '#E0E0E0', '#99DAFF', '#99DAFF', '#99DAFF'],
+    ['#99DAFF', '#99DAFF', '#99DAFF', '#99DAFF', '#99DAFF', '#E0E0E0'],
+  ];
+  
 
   return (
     <div style={containerStyle}>
@@ -91,6 +116,7 @@ const App = () => {
         <div style={{ ...columnStyle, marginRight: '0' }}>
           <BorderBox>
             <div style={titleStyle}>Time Table</div>
+            <TimeTable rows={6} columns={6} data={sampleData} />
           </BorderBox>
         </div>
       </div>
