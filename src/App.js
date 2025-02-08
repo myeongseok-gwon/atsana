@@ -8,7 +8,7 @@ import TimeTable from './components/TimeTable';
 import CategoryChip from './components/CategoryChip';
 import CategoryChipList from './components/CategoryChipList';
 import Bookmark from './components/Bookmark';
-import { starImageBase64, gifBase64 } from './assets/base64';
+import { starImageBase64, gifBase64, headerBase64 } from './assets/base64';
 
 
 const App = () => {
@@ -106,6 +106,8 @@ const App = () => {
   
 
   return (
+    <div>
+      <img src={headerBase64} />
     <div style={containerStyle}>
       <div style={innerContainerStyle}>
         <div style={column1Style}>
@@ -208,7 +210,7 @@ const App = () => {
           </BorderBox>
         </div>
       </div>
-    </div>
+    </div></div>
   );
 };
 

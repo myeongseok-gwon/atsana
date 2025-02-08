@@ -17,7 +17,7 @@ const text2Style = {
   fontSize: '14px',
   fontStyle: 'normal',
   fontWeight: 400,
-  lineHeight: '18px', // 128.571%
+  lineHeight: '15px', // 128.571%
   letterSpacing: '0.16px',
   paddingRight: '12px'
 };
