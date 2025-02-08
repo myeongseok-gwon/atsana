@@ -5,7 +5,7 @@ import React from 'react';
  * CategoryChip 컴포넌트
  * 깎인 직사각형 형태로 텍스트를 표시합니다.
  */
-const CategoryChip = ({ text }) => {
+const CategoryChip = ({ text, bgColor }) => {
   const containerStyle = {
     display: 'inline-flex',
     padding: '5px 12px',
@@ -16,7 +16,7 @@ const CategoryChip = ({ text }) => {
     flexShrink: 0,
     borderRadius: '5px',
     border: '1px solid #000',
-    background: 'var(--Tag-Green-background, #A7F0BA)',
+    background: bgColor,
   };
 
   const textStyle = {

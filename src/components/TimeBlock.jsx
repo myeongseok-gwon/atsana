@@ -12,7 +12,7 @@ import React from 'react';
 const TimeBlock = ({ bgColor }) => {
   const containerStyle = {
     display: 'flex',
-    width: '20px',
+    width: '15px',
     height: '8px',
     padding: '13px 17px',
     flexDirection: 'column',

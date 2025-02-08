@@ -5,6 +5,8 @@ import BorderBox from './components/BorderBox';
 import KeywordCard from './components/KeywordCard';
 import TimeBlock from './components/TimeBlock';
 import TimeTable from './components/TimeTable';
+import CategoryChip from './components/CategoryChip';
+import CategoryChipList from './components/CategoryChipList';
 
 const App = () => {
   const containerStyle = {
@@ -116,6 +118,8 @@ const App = () => {
         <div style={{ ...columnStyle, marginRight: '0' }}>
           <BorderBox>
             <div style={titleStyle}>Time Table</div>
+            {/* <CategoryChip text={"Lifestyle"} bgColor={'var(--Tag-Green-background, #A7F0BA)'}/> */}
+            <CategoryChipList/>
             <TimeTable rows={6} columns={6} data={sampleData} />
           </BorderBox>
         </div>

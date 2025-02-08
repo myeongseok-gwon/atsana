@@ -15,6 +15,13 @@ import CategoryIcon from './CategoryIcon';
  */
 const KeywordCard = ({ iconText, title, label, description }) => {
   // 전체 카드 컨테이너 스타일
+  const bgColor = (iconText == 'L')
+    ? '#74E792'
+    : (
+        (iconText == 'D')
+        ? '#FFD6E8'
+        : '#99DAFF'
+      )
   const cardStyle = {
     display: 'flex',
     width: '600px',
@@ -109,7 +116,7 @@ const KeywordCard = ({ iconText, title, label, description }) => {
       <div style={frameStyle}>
         {/* 컬럼1: Category Icon */}
         <div style={col1Style}>
-          <CategoryIcon text={iconText} />
+          <CategoryIcon text={iconText} bgColor={bgColor} />
         </div>
         {/* 컬럼2: 텍스트 영역 */}
         <div style={col2Style}>
