@@ -3,7 +3,8 @@ import React from 'react';
 import { Grid, Row, Column } from '@carbon/react';
 import HistoryList from './components/HistoryList';
 import KeywordCard from './components/KeywordCard';
-
+import TimeBlock from './components/TimeBlock';
+import TimeTable from './components/TimeTable';
 
 /* ────────── 시계(Clock) 컴포넌트 ────────── */
 const Clock = () => {
@@ -23,6 +24,28 @@ const Clock = () => {
 
 /* ────────── App 컴포넌트 ────────── */
 const App = () => {
+  const sampleData = [
+    ['#E0E0E0', '#E0E0E0', '#E0E0E0', '#74E792', '#74E792', '#74E792'], // Green
+    ['#74E792', '#74E792', '#74E792', '#74E792', '#74E792', '#74E792'],
+    ['#74E792', '#74E792', '#74E792', '#74E792', '#74E792', '#74E792'],
+    ['#E0E0E0', '#E0E0E0', '#E0E0E0', '#E0E0E0', '#E0E0E0', '#E0E0E0'],
+    ['#E0E0E0', '#E0E0E0', '#E0E0E0', '#99DAFF', '#99DAFF', '#99DAFF'], // Cyan, Gray, Magenta
+    ['#99DAFF', '#FFD6E8', '#FFD6E8', '#FFD6E8', '#FFD6E8', '#FFD6E8'], // Magenta
+    ['#FFD6E8', '#FFD6E8', '#FFD6E8', '#FFD6E8', '#FFD6E8', '#FFD6E8'], // Cyan
+    ['#FFD6E8', '#FFD6E8', '#FFD6E8', '#FFD6E8', '#FFD6E8', '#FFD6E8'],
+    ['#FFD6E8', '#E0E0E0', '#E0E0E0', '#E0E0E0', '#E0E0E0', '#E0E0E0'],
+    ['#E0E0E0', '#E0E0E0', '#E0E0E0', '#E0E0E0', '#E0E0E0', '#E0E0E0'],
+    ['#E0E0E0', '#E0E0E0', '#E0E0E0', '#E0E0E0', '#E0E0E0', '#E0E0E0'],
+    ['#E0E0E0', '#E0E0E0', '#99DAFF', '#99DAFF', '#99DAFF', '#99DAFF'],
+    ['#74E792', '#99DAFF', '#E0E0E0', '#E0E0E0', '#E0E0E0', '#E0E0E0'],
+    ['#E0E0E0', '#E0E0E0', '#E0E0E0', '#E0E0E0', '#E0E0E0', '#E0E0E0'],
+    ['#E0E0E0', '#99DAFF', '#99DAFF', '#FFD6E8', '#FFD6E8', '#FFD6E8'],
+    ['#99DAFF', '#FFD6E8', '#FFD6E8', '#FFD6E8', '#99DAFF', '#FFD6E8'],
+    ['#E0E0E0', '#E0E0E0', '#E0E0E0', '#E0E0E0', '#E0E0E0', '#E0E0E0'],
+    ['#E0E0E0', '#E0E0E0', '#E0E0E0', '#99DAFF', '#99DAFF', '#99DAFF'],
+    ['#99DAFF', '#99DAFF', '#99DAFF', '#99DAFF', '#99DAFF', '#E0E0E0'],
+  ];
+
   return (
     <div className="newtab-container">
       <Grid fullWidth>
@@ -35,6 +58,8 @@ const App = () => {
               label="02:12:32"
               description="Transform your browser into a beautifully designed tab that helps you feel calm, keep focus, and stay energized. "
             />
+
+            <TimeTable rows={6} columns={6} data={sampleData} />
           </Column>
 
           {/* 중앙 메인 콘텐츠 (시계 포함) */}
