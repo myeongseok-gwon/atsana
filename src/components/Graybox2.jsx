@@ -40,6 +40,22 @@ const Graybox2 = ({ title, imageSrc, altText }) => {
   return (
     <div style={containerStyle}>
       <div style={titleStyle}>{title}</div>
+      <div style={{
+                      position: 'absolute',
+                      top: '48%',
+                      left: '40%',
+                      transform: 'translate(-50%, -50%)',
+                      color: '#FFF',
+                      textAlign: 'center',
+                      fontFamily: 'IBM Plex Serif',
+                      fontSize: '23px',
+                      fontStyle: 'normal',
+                      fontWeight: 600,
+                      lineHeight: '40px',
+                      zIndex: 1
+                    }}>
+                      17
+                    </div>
       <img src={imageSrc} alt={altText} style={{ width: '100px', height: '100px' }}  />
     </div>
   );

@@ -112,6 +112,7 @@ const App = () => {
 
   return (
     <div>
+      <img src={headerBase64} />
       <div style={bookmarksContainerStyle}>
         <Bookmark isActive={true} label="Bookmark 1" />
         <Bookmark isActive={false} label="Bookmark 2" />
