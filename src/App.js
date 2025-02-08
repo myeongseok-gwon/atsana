@@ -138,7 +138,11 @@ const App = () => {
             <BorderBox>
               <div style={titleStyle}>Top Visited</div>
             </BorderBox>
-            <img src={gifBase64} alt="Animation" style={{ width: '100%', height: 'auto' }} />
+            <img src={gifBase64} alt="Animation" style={{
+              width: '100%', height: 'auto',
+              borderRadius: '5px',
+              border: '1px solid var(--Accessibility-Black-in-light-themes, #000)',
+              background: 'var(--Background-ui-background, #FFF)'}} />
           </div>
 
           <div style={column2Style}>
