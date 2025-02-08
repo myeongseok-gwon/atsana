@@ -80,7 +80,7 @@ const App = () => {
         <div style={columnStyle}>
               <BorderBox>
                 <div style={titleStyle}>Focus</div>
-                <Image src={starImageUrl} alt="Stars" style={{ width: '100%', height: 'auto' }} />
+                <img src={starImageUrl} alt="Stars" style={{ width: '100%', height: 'auto' }} />
               </BorderBox>
               <BorderBox>
                 <div style={titleStyle}>Top Visited</div>
