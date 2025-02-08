@@ -70,6 +70,8 @@ const App = () => {
     ['#E0E0E0', '#E0E0E0', '#E0E0E0', '#99DAFF', '#99DAFF', '#99DAFF'],
     ['#99DAFF', '#99DAFF', '#99DAFF', '#99DAFF', '#99DAFF', '#E0E0E0'],
   ];
+
+  const starImageUrl = chrome.runtime.getURL('images/Star.png');
   
 
   return (
