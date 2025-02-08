@@ -46,11 +46,12 @@ module.exports = {
       filename: 'newtab.html',
       inject: 'body', // 번들 스크립트를 </body> 태그 앞에 삽입
     }),
-    // manifest.json과 새 탭 전용 CSS 파일을 dist 폴더로 복사
+    // manifest.json, newtab.css, 그리고 background.js를 dist 폴더로 복사
     new CopyWebpackPlugin({
       patterns: [
         { from: 'public/manifest.json', to: 'manifest.json' },
-        { from: 'public/newtab.css', to: 'newtab.css' }
+        { from: 'public/newtab.css', to: 'newtab.css' },
+        { from: 'public/background.js', to: 'background.js' } // 추가된 부분
       ],
     }),
   ],
