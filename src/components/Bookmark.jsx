@@ -10,6 +10,7 @@ import React from 'react';
  *   - label: 북마크에 표시할 텍스트
  */
 const Bookmark = ({ isActive, label }) => {
+  const textColor = isActive? '#FFF':'#161616'
   const commonStyle = {
     display: 'flex',
     padding: '16px',
@@ -18,8 +19,15 @@ const Bookmark = ({ isActive, label }) => {
     gap: '10px',
     alignSelf: 'stretch',
     borderRadius: '5px',
-    border: '1px solid var(--Accessibility-Black-in-light-themes, #000)'
+    border: '1px solid var(--Accessibility-Black-in-light-themes, #000)',
+    fontFamily: "IBM Plex Sans",
+    fontSize: '16px',   // 수정: font-size → fontSize
+    fontStyle: 'normal', // 수정: font-style → fontStyle
+    fontWeight: 400,     // 수정: font-weight → fontWeight
+    lineHeight: '24px',  // 수정: line-height → lineHeight
+    color: textColor
   };
+  
 
   const activeStyle = {
     background: 'var(--Carbon-for-IBM-Products-User-profile-images-light-purple, #8A3FFC)',
@@ -30,7 +38,8 @@ const Bookmark = ({ isActive, label }) => {
   };
 
   return (
-    <div style={{ ...commonStyle, ...(isActive ? activeStyle : inactiveStyle) }}>
+    <div style={{ ...commonStyle, ...(isActive ? activeStyle : inactiveStyle) }
+    }>
       {label}
     </div>
   );

@@ -122,10 +122,10 @@ const App = () => {
     <div>
       <img src={headerBase64} alt="Header" />
       <div style={bookmarksContainerStyle}>
-        <Bookmark isActive={true} label="Bookmark 1" />
-        <Bookmark isActive={false} label="Bookmark 2" />
-        <Bookmark isActive={false} label="Bookmark 3" />
-        <Bookmark isActive={false} label="Bookmark 4" />
+        <Bookmark isActive={true} label="MAIN" />
+        <Bookmark isActive={false} label="ANALYSIS" />
+        <Bookmark isActive={false} label="SAVED" />
+        <Bookmark isActive={false} label="SETTING" />
       </div>
       <div style={containerStyle}>
         <div style={innerContainerStyle}>
