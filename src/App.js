@@ -7,6 +7,7 @@ import TimeBlock from './components/TimeBlock';
 import TimeTable from './components/TimeTable';
 import CategoryChip from './components/CategoryChip';
 import CategoryChipList from './components/CategoryChipList';
+import Bookmark from './components/Bookmark';
 
 const App = () => {
   const containerStyle = {
@@ -23,7 +24,18 @@ const App = () => {
     height: '872px',
     position: 'absolute',
     top: '283.76px',
-    left: '56.5px'
+    left: '56.5px',
+    zIndex: 1
+  };
+
+  const bookmarksContainerStyle = {
+    display: 'flex',
+    flexDirection: 'column',
+    gap: '16px',
+    position: 'absolute',
+    top: '323.76px',
+    left: '1491.5px',
+    zIndex: 2
   };
 
   const innerContainerStyle = {
@@ -92,69 +104,77 @@ const App = () => {
   
 
   return (
-    <div style={containerStyle}>
-      <div style={innerContainerStyle}>
-        <div style={column1Style}>
-              <BorderBox>
-                <div style={titleStyle}>Focus</div>
-                <img src={starImageUrl} alt="Stars" style={{ width: '100%', height: 'auto' }} />
-              </BorderBox>
-              <BorderBox>
-                <div style={titleStyle}>Top Visited</div>
+    <div>
+        <div style={bookmarksContainerStyle}>
+          <Bookmark isActive={true} label="Bookmark 1" />
+          <Bookmark isActive={false} label="Bookmark 2" />
+          <Bookmark isActive={false} label="Bookmark 3" />
+          <Bookmark isActive={false} label="Bookmark 4" />
+      </div>
+      <div style={containerStyle}>
+        <div style={innerContainerStyle}>
+          <div style={column1Style}>
+                <BorderBox>
+                  <div style={titleStyle}>Focus</div>
+                  <img src={starImageUrl} alt="Stars" style={{ width: '100%', height: 'auto' }} />
+                </BorderBox>
+                <BorderBox>
+                  <div style={titleStyle}>Top Visited</div>
 
-              </BorderBox>
-              <BorderBox>
-                <div style={titleStyle}>Video</div>
-                <video width="100%" controls>
-                  <source src="videos/temu_ad.mov" type="video/quicktime" />
-                  Your browser does not support the video tag.
-                </video>
-              </BorderBox>
-          </div>
-        <div style={column2Style}>
-          <BorderBox>
-            <div style={titleStyle}>Today's Picks</div>
-            <div style={keywordContainerStyle}>
-              <KeywordCard
-                iconText="L"
-                title="Travel Spot for Spring Break"
-                label="02:12:32"
-                description="Rose Point Park, located about 45 miles from Pittsburgh, offers RV-friendly campsites and family-friendly events, making it an ideal spring break destination."
-              />
-              <KeywordCard
-                iconText="D"
-                title="AI in Drug Discovery"
-                label="02:12:32"
-                description="AI is revolutionizing drug discovery, accelerating the process of identifying new treatments with precision and efficiency."
-              />
-              <KeywordCard
-                iconText="E"
-                title="Rose APT"
-                label="02:12:32"
-                description="Rosé from and Bruno Mars teamed up to release the hit single ‘APT.’, blending their unique styles into a captivating collaboration."
-              />
-              <KeywordCard
-                iconText="D"
-                title="Central Dogma"
-                label="02:12:32"
-                description="The central dogma of molecular biology describes the flow of genetic information from DNA to RNA to protein."
-              />
-              <KeywordCard
-                iconText="E"
-                title="Squid Game 2"
-                label="02:12:32"
-                description="In Episode 4, contestants face the ‘Six-Legged Pentathlon,’ a series of mini-games requiring intense teamwork and strategy"
-              />
+                </BorderBox>
+                <BorderBox>
+                  <div style={titleStyle}>Video</div>
+                  <video width="100%" controls>
+                    <source src="videos/temu_ad.mov" type="video/quicktime" />
+                    Your browser does not support the video tag.
+                  </video>
+                </BorderBox>
             </div>
-          </BorderBox>
-        </div>
-        <div style={{ ...columnStyle, marginRight: '0' }}>
-          <BorderBox>
-            <div style={titleStyle}>Time Table</div>
-            {/* <CategoryChip text={"Lifestyle"} bgColor={'var(--Tag-Green-background, #A7F0BA)'}/> */}
-            <CategoryChipList/>
-            <TimeTable rows={6} columns={6} data={sampleData} />
-          </BorderBox>
+          <div style={column2Style}>
+            <BorderBox>
+              <div style={titleStyle}>Today's Picks</div>
+              <div style={keywordContainerStyle}>
+                <KeywordCard
+                  iconText="L"
+                  title="Travel Spot for Spring Break"
+                  label="02:12:32"
+                  description="Rose Point Park, located about 45 miles from Pittsburgh, offers RV-friendly campsites and family-friendly events, making it an ideal spring break destination."
+                />
+                <KeywordCard
+                  iconText="D"
+                  title="AI in Drug Discovery"
+                  label="02:12:32"
+                  description="AI is revolutionizing drug discovery, accelerating the process of identifying new treatments with precision and efficiency."
+                />
+                <KeywordCard
+                  iconText="E"
+                  title="Rose APT"
+                  label="02:12:32"
+                  description="Rosé from and Bruno Mars teamed up to release the hit single ‘APT.’, blending their unique styles into a captivating collaboration."
+                />
+                <KeywordCard
+                  iconText="D"
+                  title="Central Dogma"
+                  label="02:12:32"
+                  description="The central dogma of molecular biology describes the flow of genetic information from DNA to RNA to protein."
+                />
+                <KeywordCard
+                  iconText="E"
+                  title="Squid Game 2"
+                  label="02:12:32"
+                  description="In Episode 4, contestants face the ‘Six-Legged Pentathlon,’ a series of mini-games requiring intense teamwork and strategy"
+                />
+              </div>
+            </BorderBox>
+          </div>
+          <div style={{ ...columnStyle, marginRight: '0' }}>
+            <BorderBox>
+              <div style={titleStyle}>Time Table</div>
+              {/* <CategoryChip text={"Lifestyle"} bgColor={'var(--Tag-Green-background, #A7F0BA)'}/> */}
+              <CategoryChipList/>
+              <TimeTable rows={6} columns={6} data={sampleData} />
+            </BorderBox>
+          </div>
         </div>
       </div>
     </div>
