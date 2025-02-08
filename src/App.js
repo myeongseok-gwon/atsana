@@ -67,7 +67,7 @@ const App = () => {
     background: 'var(--Notification-success-background-color, #DEFBE6)',
     boxShadow: '0px 2px 6px 0px rgba(0, 0, 0, 0.30)',
     width: '1505px',
-    height: '872px',
+    height: '899px',
     position: 'absolute',
     top: '283.76px',
     left: '56.5px',
@@ -80,8 +80,8 @@ const App = () => {
     gap: '16px',
     position: 'absolute',
     top: '323.76px',
-    left: '1491.5px',
-    zIndex: 2
+    left: '1610px',
+    zIndex: 0
   };
 
   const innerContainerStyle = {
@@ -117,6 +117,21 @@ const App = () => {
     letterSpacing: '0px',
     color: '#000'
   };
+  const topVisitedContainerStyle = {
+    display: 'flex',
+    justifyContent: 'center',  // 가운데 정렬
+    gap: '10px',               // 원들 사이 간격
+    marginTop: '10px'          // 제목과 간격 조정
+  };
+  
+  const circleImageStyle = {
+    width: '50px',             // 원 크기
+    height: '50px',
+    borderRadius: '50%',       // 동그랗게 만들기
+    objectFit: 'cover',        // 이미지가 원을 가득 채우도록 설정
+    border: '2px solid #ccc'   // 테두리 추가 (선택 사항)
+  };
+  
 
   return (
     <div>
@@ -137,6 +152,11 @@ const App = () => {
             </BorderBox>
             <BorderBox>
               <div style={titleStyle}>Top Visited</div>
+              <div style={topVisitedContainerStyle}>
+                <img src={starImageBase64} alt="Visited 1" style={circleImageStyle} />
+                <img src={starImageBase64} alt="Visited 2" style={circleImageStyle} />
+                <img src={starImageBase64}s alt="Visited 3" style={circleImageStyle} />
+              </div>
             </BorderBox>
             <img src={gifBase64} alt="Animation" style={{
               width: '100%', height: 'auto',
@@ -147,7 +167,19 @@ const App = () => {
 
           <div style={column2Style}>
             <BorderBox>
-              <div style={titleStyle}>Today's Picks</div>
+              <div style={
+                {
+                  fontFamily: 'IBM Plex Sans',
+                  fontWeight: 600,
+                  fontSize: '36px',
+                  lineHeight: '44px',
+                  letterSpacing: '0px',
+                  color: '#000',
+                  marginBottom: '10px'
+                }
+              }>
+                Today's Picks
+              </div>
               <div style={keywordContainerStyle}>
                 {keywordData.map((item, index) => (
                   <KeywordCard
@@ -166,7 +198,7 @@ const App = () => {
             <BorderBox>
               <div style={titleStyle}>Time Table</div>
               <CategoryChipList />
-              <TimeTable rows={6} columns={6} data={sampleData} />
+              <TimeTable rows={6} columns={6} data={sampleData} style={{maxHeight:'100%', overflow: 'auto'}} />
             </BorderBox>
           </div>
         </div>
